@@ -14,8 +14,7 @@ const pool = new Pool({
   password: DB_PASSWORD,
   host: DB_HOST,
   database: DB_DATABASE,
-  // port:DB_PORT,
-
+  port: DB_PORT
 });
 
 
