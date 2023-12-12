@@ -1,35 +1,150 @@
 /* Google font import Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
-
-body{
+/* body{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f2f2f2;
+} */
+
+body{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgba(204, 204, 204, 1) 0%,
+    rgba(238, 238, 238, 1) 50%,
+    rgba(204, 204, 204, 1) 100%
+  );
+  font-family: 'Poppins', sans-serif;
+  min-height: 50vh;  
 }
+
+.container{
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  position:relative;
+  
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-icon, 
+.cart-icon {
+  color: black; 
+}
+
+.navbar-center {
+  text-align: center;
+}
+
+.add-address-btn {
+  padding: 20px;
+  font-size: 1em;
+  background-color: #023802;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scaleX(2);
+}
+
+.navbar-right i {
+  font-size: 24px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: transparent; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+/* Estilos para el ícono de la lupa */
+.fa-search {
+  margin-right: 10px;
+}
+
+/* Estilos para el campo de entrada de texto */
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+
+.swiper-container {
+  width: 100%;
+  padding: 20px; 
+}
+
+.swiper-wrapper {
+  display: flex; 
+}
+
 
 .swiper{
-  width: 950px;
+  margin-top: 40px;
+}
+.swiper-slide{
+  margin-bottom: 50px;
+  background-color: #FFFFFF;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  height: 295px;
+  width: 420px;
+  position: relative;
 }
 
-section .card .image {
+/* .swiper-slide img{
+  width: 295px;
+  border-radius: 15px;
+  height: 420px;
+} */
+/* section .card .image {
   height: 140px;
   width: 200px;
   border-radius: 10%;
   padding: 3px;
   background-color:indigo;
-}
+} */
 
 section .card .image img{
-  height: 100%;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: 10%;
@@ -40,18 +155,10 @@ section .card .image img{
   position: relative;
   background: #fff;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 280px;
 }
 
-/* .card::before{
-  content: "";
-  position: absolute;
-  height: 40%;
-  width: 100%;
-  background: indigo;
-  border-radius: 20px 20px 0 0;
-} */
 
 .card .card-content{
   display: flex;
@@ -83,15 +190,46 @@ section .card .image img{
 }
 
 .card .recipe-name{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  color: #333;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto desborda */
+  overflow: hidden; /* Oculta cualquier texto que desborde del contenedor */
+  text-transform: capitalize;
+  
 }
 
 .recipe-name .name{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
+}
+
+.offerPrice{
+  color: rgba(50, 50, 50, 0.6);
+  
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+.discount-badge {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  background-color: #8cc84b; 
+  padding: 5px;
+  border-radius: 10px;
+  color: #fff; 
+  font-size: 0.8em; 
+}
+
+
+@media(max-width:991px){
+  .swiper{
+    padding: 0 70px;
+  }
+  .swiper-slide img{
+    width: 100%;
+  }
 }
 

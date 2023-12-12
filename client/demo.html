@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="demo.css">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="art-board">
+         <div class="art-board__container">
+            <div class="card">
+               <div class="card__image">
+                  <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Salad" />
+               </div>
+               <div class="card__info">
+                  <div class="car__info--title">
+                     <h3>Salad</h3>
+                     <p>Fresh & sweet</p>
+                  </div>
+                  <div class="card__info--price">
+                     <p>$ 5</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card__image">
+                  <img src="https://images.pexels.com/photos/840216/pexels-photo-840216.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Fish" />
+               </div>
+               <div class="card__info">
+                  <div class="car__info--title">
+                     <h3>Fish</h3>
+                     <p>Fresh & sweet</p>
+                  </div>
+                  <div class="card__info--price">
+                     <p>$ 5</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card__image">
+                  <img src="https://images.pexels.com/photos/4001871/pexels-photo-4001871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Pizza" />
+               </div>
+               <div class="card__info">
+                  <div class="car__info--title">
+                     <h3>Pizza</h3>
+                     <p>Fresh & sweet</p>
+                  </div>
+                  <div class="card__info--price">
+                     <p>$ 5</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>+++++++++++++++{x{}cc}xCX
+                  </div>
+               </div>xZ
+            </div><<
+            <div class="card">
+               <div Zclass="card__image">
+                  <img src="https://images.pexels.com/photos/792028/pexels-photo-792028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Sushi" />
+               </div>
+               <div class="card__info">
+                  <div class="car__info--title">
+                     <h3>Sushi</h3>
+                     <p>Fresh & sweet</p>
+                  </div>
+                  <div class="card__info--price">
+                     <p>$ 5</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card__image">
+                  <img src="https://images.pexels.com/photos/907142/pexels-photo-907142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Dessert" />
+               </div>
+               <div class="card__info">
+                  <div class="car__info--title">x
+xx                     <h3>Dessert</h3>
+  zx                   <p>Fresh & sweet</p>
+                  </div>
+                  <div class="card__info--price">
+                     <p>$ 5</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Agrega las flechas de control -->
+        <div class="slider-control left" onclick="sliderMove(-1)">&#10094;</div>
+        <div class="slider-control right" onclick="sliderMove(1)">&#10095;</div>
+      </div>
+   </div>
+  
+  </section>
+
+  <!-- Script para el control del slider -->
+  <script>
+    let slideIndex = 1;
+
+    function sliderMove(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function showSlides(n) {
+      let i;
+      const slides = document.querySelectorAll('.card');
+      
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      // Oculta todas las tarjetas
+      slides.forEach((slide) => {
+        slide.style.transform = 'translateX(-15px)';
+      });
+
+      // Muestra la tarjeta activa
+      slides[slideIndex - 1].style.transform = 'scale(1.1)';
+    }
+  </script>
+</body>
+</html>

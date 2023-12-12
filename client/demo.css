@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal en el cuerpo */
+}
+
+.art-board {
+  border-radius: 40px;
+  border: 6px solid black;
+  box-shadow: -30px 70px 150px -20px rgba(51, 51, 51, 0.25);
+  overflow: hidden; /* Ocultar contenido que se desborda */
+}
+
+.art-board__container {
+  margin: 18px 0;
+  width: 100%;
+  height: 250px;
+  overflow: hidden; /* Ocultar contenido que se desborda */
+  white-space: nowrap;
+  display: flex;
+}
+
+.card {
+  width: 295px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid lavender;
+  margin: 10px;
+  box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Animación de desplazamiento */
+}
+
+.card__image {
+  position: relative;
+  height: 140px;
+  overflow: hidden; /* Ocultar imagen que se desborda */
+}
+
+.card__image > img {
+  max-width: 100%;
+  border-bottom-right-radius: 30px;
+  transform: rotate(10deg) translate(-15px, -55px);
+  position: absolute;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0px 30px 20px 30px;
+}
+
+.card__info h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card__info p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card__info--price {
+  text-align: right;
+  color: orangered;
+}
+
+.rect2 {
+  position: relative;
+  bottom: 315px;
+  right: 15px;
+  width: 325px;
+  height: 230px;
+  border: 1px solid lavender;
+  border-radius: 0 0px 80px 0;
+  background-image: url();
+  transform: rotate(10deg);
+  object-fit: cover;
+}
+
+.checked {
+  color: #ffd700;
+}
+
+/* Flechas de control */
+.art-board__container:hover .card {
+  transform: translateX(-15px); /* Desplazamiento suave al pasar el ratón */
+}
+
+.art-board__container:hover .card:hover {
+  transform: scale(1.1); /* Escala de tarjeta activa */
+}
+
+.art-board__container .slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.art-board__container .slider-control.left {
+  left: 0;
+}
+
+.art-board__container .slider-control.right {
+  right: 0;
+}
