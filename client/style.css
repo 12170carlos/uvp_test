@@ -223,6 +223,16 @@ section .card .image img{
   font-size: 0.8em; 
 }
 
+.media-icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  color: #023802;
+  font-size: 24px;
+}
+
 
 @media(max-width:991px){
   .swiper{
